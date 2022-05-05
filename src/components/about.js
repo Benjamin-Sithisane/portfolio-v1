@@ -34,12 +34,12 @@ const StyledAboutSection = styled.section`
     }
 
     .about-title {
-        margin: 25px; 
+        margin: 0 0 25px 0; 
     }
 
     @media (max-width: 1300px) {
         padding: 0;
-        margin: 0 0 40px 0;
+        margin: 0 0 75px 0;
         
         p {
             font-size: 18px;
@@ -51,6 +51,7 @@ const StyledAboutSection = styled.section`
 
         .container {
             flex-direction: column;
+            align-items: center;
         }
     }
 `;
@@ -59,7 +60,7 @@ const About = () => {
     return (
         <StyledAboutSection>
             <div className='title-container'>
-                <h2 className='about-title'>About me</h2>
+                <h2 className='about-title'>About Me</h2>
                 <div className='line'></div>
             </div>
             <div className='container'>

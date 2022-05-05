@@ -2,10 +2,18 @@ import styled from 'styled-components';
 
 const StyledProjectsSection = styled.section`
     display: flex;
-    height: 50vh;
     flex-direction: column;
     margin: 0 150px;
     padding: 100px 0;
+
+    h1 {
+        margin: 0 0 25px 0;
+    }
+
+    .grid {
+        display: grid;
+        gap: 10px;
+    }
 
     .project-card {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -32,7 +40,7 @@ const StyledProjectsSection = styled.section`
         margin: 0 0 100px 0;
         
         .container {
-            display: flex;
+            display: grid;
             flex-direction: column;
         }
     }
@@ -43,11 +51,24 @@ const Projects = () => {
         <StyledProjectsSection>
             <h1>Hello from projects section</h1>
 
-
-            <div className="project-card">
-                <div className='picture-placeholder'></div>
-                <div className='info-container'>
-                    <h2>1</h2>
+            <div className='grid'>
+                <div className="project-card">
+                    <div className='picture-placeholder'></div>
+                    <div className='info-container'>
+                        <h2>1</h2>
+                    </div>
+                </div>
+                <div className="project-card">
+                    <div className='picture-placeholder'></div>
+                    <div className='info-container'>
+                        <h2>1</h2>
+                    </div>
+                </div>
+                <div className="project-card">
+                    <div className='picture-placeholder'></div>
+                    <div className='info-container'>
+                        <h2>1</h2>
+                    </div>
                 </div>
             </div>
         </StyledProjectsSection>

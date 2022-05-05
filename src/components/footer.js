@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
     display: flex;
+    background-color: var(--footer-color);
     -webkit-box-pack: center;
     justify-content: center;
     -webkit-box-align: center;
