@@ -10,6 +10,7 @@ const StyledHeroSection = styled.section`
     font-size: 25px;
     
     p {
+        color: var(--accent-color);
         margin: 0;
     }
 

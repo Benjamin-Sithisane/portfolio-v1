@@ -23,9 +23,16 @@ const StyledContactSection = styled.section`
 
 const StyledContactButton = styled.button`
     border-style: solid;
-    border-radius: 10%;
-    width: 150px;
-    height: 75px;
+    border-color: var(--accent-color);
+    border-radius: 4px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 2rem;
+    background-color: var(--main-color);
+    color: var(--font-color-p);
+
+    .contact-button {
+        padding: 25px;
+    }
 `;
 
 const Contact = () => {
@@ -34,10 +41,14 @@ const Contact = () => {
             <h1>Hello from the Contact section</h1>
             <p>
                 I'm currently looking for opportunities! Feel free to drop a question or conversation
-                I'll do my best to get back to you!.
+                I'll do my best to get back to you!
             </p>
 
-            <StyledContactButton>Contact Me!</StyledContactButton>
+            <StyledContactButton>
+                <div className='contact-button'>
+                    Contact Me!
+                </div>
+            </StyledContactButton>
         </StyledContactSection>
     );
 }

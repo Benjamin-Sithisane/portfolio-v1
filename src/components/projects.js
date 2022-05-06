@@ -12,7 +12,7 @@ const StyledProjectsSection = styled.section`
 
     .grid {
         display: grid;
-        gap: 10px;
+        gap: 25px;
     }
 
     .project-card {
