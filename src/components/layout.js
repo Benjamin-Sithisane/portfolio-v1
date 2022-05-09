@@ -1,3 +1,4 @@
+import React from 'react';
 import Hero from "./hero";
 import Navbar from './navbar';
 import About from "./about";
@@ -27,7 +28,7 @@ const Layout = () => {
                 <Projects />
                 <Contact />
             </StyledLayout>
-            <Footer />
+            <Footer /> 
         </>
     );
 }

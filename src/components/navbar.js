@@ -1,4 +1,6 @@
+import React from "react";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 const StyledNavBar = styled.nav`
     position: fixed;
@@ -42,12 +44,12 @@ const Navbar = () => {
     return (
         <StyledNavBar>
             <StyledNavBarContainer>
-                <a href="#">Ben Sithisane</a>
+                <Link to='/'>Ben Sithisane</Link>
                 
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
                 </ul>
             </StyledNavBarContainer>
         </StyledNavBar>

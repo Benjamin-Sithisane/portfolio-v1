@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledProjectsSection = styled.section`
@@ -49,7 +50,7 @@ const StyledProjectsSection = styled.section`
 const Projects = () => {
     return (
         <StyledProjectsSection>
-            <h1>Hello from projects section</h1>
+            <h1>Some Projects I worked on.</h1>
 
             <div className='grid'>
                 <div className="project-card">

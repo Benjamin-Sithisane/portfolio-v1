@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledContactSection = styled.section`
@@ -26,7 +27,7 @@ const StyledContactButton = styled.button`
     border-color: var(--accent-color);
     border-radius: 4px;
     font-family: 'Epilogue', sans-serif;
-    font-size: 2rem;
+    font-size: 30px;
     background-color: var(--main-color);
     color: var(--font-color-p);
 
@@ -38,7 +39,6 @@ const StyledContactButton = styled.button`
 const Contact = () => {
     return (
         <StyledContactSection>
-            <h1>Hello from the Contact section</h1>
             <p>
                 I'm currently looking for opportunities! Feel free to drop a question or conversation
                 I'll do my best to get back to you!
