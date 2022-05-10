@@ -16,6 +16,12 @@ const StyledNavBar = styled.nav`
         list-style-type: none;
         text-decoration: none;
     }
+
+    
+    a:hover {
+        color: var(--accent-color);
+        transition: 0.3s ease-in-out;
+    }
 `;
 
 const StyledNavBarContainer = styled.div`
@@ -44,12 +50,12 @@ const Navbar = () => {
     return (
         <StyledNavBar>
             <StyledNavBarContainer>
-                <Link to='/'>Ben Sithisane</Link>
+                <Link to='#'>Ben Sithisane</Link>
                 
                 <ul>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#projects">Projects</a></li>
+                    <li><a href="/#contact">Contact</a></li>
                 </ul>
             </StyledNavBarContainer>
         </StyledNavBar>

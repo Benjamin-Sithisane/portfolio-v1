@@ -38,7 +38,7 @@ const StyledContactButton = styled.button`
 
 const Contact = () => {
     return (
-        <StyledContactSection>
+        <StyledContactSection id='contact'>
             <p>
                 I'm currently looking for opportunities! Feel free to drop a question or conversation
                 I'll do my best to get back to you!

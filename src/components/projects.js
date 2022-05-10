@@ -49,7 +49,7 @@ const StyledProjectsSection = styled.section`
 
 const Projects = () => {
     return (
-        <StyledProjectsSection>
+        <StyledProjectsSection id='projects'>
             <h1>Some Projects I worked on.</h1>
 
             <div className='grid'>

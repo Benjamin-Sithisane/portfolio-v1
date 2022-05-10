@@ -5,7 +5,7 @@ const profilepic = require('../img/benprofilepic.jpg');
 const StyledAboutSection = styled.section`
     margin: 0 200px;
     padding: 100px 0px;
-    
+
     h1 {
         margin: 0 0 15px 10px;
     }
@@ -41,7 +41,8 @@ const StyledAboutSection = styled.section`
     @media (max-width: 1300px) {
         padding: 0;
         margin: 0 0 75px 0;
-        
+        height: auto;
+
         p {
             font-size: 18px;
         }
@@ -59,7 +60,7 @@ const StyledAboutSection = styled.section`
 
 const About = () => {
     return (
-        <StyledAboutSection>            
+        <StyledAboutSection id='about'>            
             <h1>About Me</h1>
 
             <div className='container'>
