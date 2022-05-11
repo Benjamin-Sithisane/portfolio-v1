@@ -10,6 +10,28 @@ const StyledNavBar = styled.nav`
     backdrop-filter: blur(10px);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
 
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px;
+    }
+
+    .nav-container ul {
+        padding: 0 25px;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-container li a {
+        padding: 0 15px;
+        list-style-type: none;
+        text-decoration: none;
+        color: var(--font-color-p);
+    }
+
     a {
         color: var(--font-color-p);
         padding: 0 15px;
@@ -17,49 +39,31 @@ const StyledNavBar = styled.nav`
         text-decoration: none;
     }
 
-    
     a:hover {
         color: var(--accent-color);
         transition: 0.3s ease-in-out;
     }
-`;
 
-const StyledNavBarContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 25px;
-
-    ul {
-        padding: 0 25px;
-        display: flex;
-        list-style-type: none;
-        align-items: center;
-        justify-content: center;
-    }
-
-    li a {
-        padding: 0 15px;
-        list-style-type: none;
-        text-decoration: none;
-        color: var(--font-color-p);
+    @media screen and (max-width: 768px) {
+        display: none;
     }
 `;
 
 const Navbar = () => {
     return (
         <StyledNavBar>
-            <StyledNavBarContainer>
+            <div className="nav-container">
                 <Link to='#'>Ben Sithisane</Link>
                 
-                <ul>
+                <ul className="nav-links">
                     <li><a href="/#about">About</a></li>
                     <li><a href="/#projects">Projects</a></li>
                     <li><a href="/#contact">Contact</a></li>
                 </ul>
-            </StyledNavBarContainer>
+            </div>
         </StyledNavBar>
     );
 }
+
 
 export default Navbar;

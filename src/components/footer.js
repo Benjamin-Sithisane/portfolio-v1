@@ -16,10 +16,13 @@ const StyledFooter = styled.footer`
 
 `;
 
+
 const Footer = () => {
     return (
         <StyledFooter>
-            <h1>Hello from Footer</h1>
+            <div>
+                <span>Designed &#38; built by Ben Sithisane.</span>
+            </div>
         </StyledFooter>
     );
 }
