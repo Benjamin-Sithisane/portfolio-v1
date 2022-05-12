@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Hero from "./hero";
 import Navbar from './navbar';
+import MobileMenu from './mobile-menu';
 import About from "./about";
 import Projects from "./projects";
 import Contact from "./contact";
@@ -19,9 +20,17 @@ const StyledLayout = styled.div `
 `;
 
 const Layout = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    }
+
+
     return (
         <>
-            <Navbar />
+            <Navbar toggle={toggle}/>
+            <MobileMenu isOpen={isOpen} toggle={toggle}/>
             <StyledLayout>
                 <Hero />
                 <About />

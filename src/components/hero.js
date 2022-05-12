@@ -23,8 +23,8 @@ const StyledHeroSection = styled.section`
 const Hero = () => {
     return (
         <StyledHeroSection>
-                <h1>Hey There, I'm a guy doing who code things.</h1>
-                <p>Ben's the name I'm a software developer.</p>
+            <h1>Hey there, I'm a guy who code things.</h1>
+            <p>Ben's the name and I'm a software developer.</p>
         </StyledHeroSection>  
     );
 }

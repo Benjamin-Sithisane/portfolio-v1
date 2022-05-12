@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
 
 const StyledNavBar = styled.nav`
     position: fixed;
@@ -39,31 +40,50 @@ const StyledNavBar = styled.nav`
         text-decoration: none;
     }
 
-    a:hover {
+    svg {
+        display: none;
+        cursor: pointer;
+    }
+
+    svg:hover {
+            transition: 0.3s ease-in-out;
+            color: var(--accent-color);
+    }
+
+    .nav-container li a:hover {
         color: var(--accent-color);
         transition: 0.3s ease-in-out;
     }
 
     @media screen and (max-width: 768px) {
-        display: none;
+        .nav-container ul {
+            display: none;
+        }
+
+        svg {
+            display: block;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
     }
 `;
 
-const Navbar = () => {
-    return (
+const Navbar = ({ toggle }) => {
+    return(
         <StyledNavBar>
-            <div className="nav-container">
-                <Link to='#'>Ben Sithisane</Link>
-                
+             <div className="nav-container">
+                <Link to='/'>Ben Sithisane</Link>
+
+                <FaBars onClick={toggle}/>
                 <ul className="nav-links">
-                    <li><a href="/#about">About</a></li>
-                    <li><a href="/#projects">Projects</a></li>
-                    <li><a href="/#contact">Contact</a></li>
+                    <li><Link to='about'>About</Link></li>
+                    <li><Link to='projects'>Projects</Link></li>
+                    <li><Link to='contact'>Contact</Link></li>
                 </ul>
             </div>
         </StyledNavBar>
     );
 }
-
 
 export default Navbar;

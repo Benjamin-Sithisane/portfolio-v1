@@ -31,6 +31,13 @@ const StyledContactButton = styled.button`
     background-color: var(--main-color);
     color: var(--font-color-p);
 
+
+    :hover {
+        filter: brightness(1.25);
+        cursor: pointer;
+        transition: 0.4s ease-in-out;    
+    }
+
     .contact-button {
         padding: 25px;
     }
