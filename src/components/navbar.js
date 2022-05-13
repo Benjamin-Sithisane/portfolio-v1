@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { NavHashLink } from "react-router-hash-link";
 import { FaBars } from 'react-icons/fa';
+import { animateScroll as scroll } from "react-scroll";
 
 const StyledNavBar = styled.nav`
     position: fixed;
@@ -70,16 +72,30 @@ const StyledNavBar = styled.nav`
 `;
 
 const Navbar = ({ toggle }) => {
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
+
+    const toggleContact = () => {
+        scroll.scrollToBottom();
+    }
+
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -100; 
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    }
+
     return(
         <StyledNavBar>
              <div className="nav-container">
-                <Link to='/'>Ben Sithisane</Link>
+                <NavLink to='/' onClick={toggleHome}>Ben Sithisane</NavLink>
 
                 <FaBars onClick={toggle}/>
                 <ul className="nav-links">
-                    <li><Link to='about'>About</Link></li>
-                    <li><Link to='projects'>Projects</Link></li>
-                    <li><Link to='contact'>Contact</Link></li>
+                    <li><NavHashLink smooth to='#about' scroll={el => scrollWithOffset(el)}>About</NavHashLink></li>
+                    <li><NavHashLink smooth to='#projects' scroll={el => scrollWithOffset(el)}>Projects</NavHashLink></li>
+                    <li><NavLink to='contact' onClick={toggleContact}>Contact</NavLink></li>
                 </ul>
             </div>
         </StyledNavBar>

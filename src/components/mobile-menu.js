@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
+import { animateScroll as scroll } from "react-scroll";
 
 const StyledMobileMenu = styled.nav`
     display: none;
@@ -26,7 +28,7 @@ const StyledMobileMenu = styled.nav`
         align-items: center;
         top: 0;
         right: 0;        
-        transition: 0.3s ease-in-out;
+        transition: 0.4s ease-in-out;
         background-color: var(--main-color);
         opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
         top: ${({ isOpen }) => (isOpen ? '0' : '-100')};
@@ -55,14 +57,24 @@ const StyledMobileMenu = styled.nav`
 `;
 
 const MobileMenu = ({ isOpen, toggle }) => {
+    const toggleContact = () => {
+        scroll.scrollToBottom();   
+    }
+
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -100; 
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    }
+
     return (
         <StyledMobileMenu isOpen={isOpen} onClick={toggle}>
             <FaTimes isOpen={isOpen} onClick={toggle}/>
 
             <ul>
-                <li><Link to='about'>About</Link></li>
-                <li><Link to='projects'>Projects</Link></li>
-                <li><Link to='contact'>Contact</Link></li>
+                <li><NavHashLink smooth to='#about' scroll={el => scrollWithOffset(el)}>About</NavHashLink></li>
+                <li><NavHashLink smooth to='#projects' scroll={el => scrollWithOffset(el)}>Projects</NavHashLink></li>
+                <li><NavLink to='contact' onClick={toggleContact}>Contact</NavLink></li>
             </ul>
         </StyledMobileMenu>
     );
