@@ -28,9 +28,9 @@ function Hero() {
     }, []);
 
     return (
-        <StyledHeroSection data-aos='fade-up'>
-            <h1>Hey there, I'm a guy who code things.</h1>
-            <p>Ben's the name and I'm a software developer.</p>
+        <StyledHeroSection>
+            <h1 data-aos='fade-down'>Hey there, I'm a guy who code things.</h1>
+            <p data-aos='fade-up'>Ben's the name and I'm a software developer.</p>
         </StyledHeroSection>  
     );
 }
