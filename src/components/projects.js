@@ -62,7 +62,7 @@ const Projects = () => {
             <h1>Some Projects I worked on.</h1>
 
             <div className='grid'>
-                <div className="project-card" id='one' data-aos='fade-up'>
+                <div className="project-card" id='one'>
                     <div className='picture-placeholder'></div>
                     <div className='info-container'>
                         <h2>1</h2>
