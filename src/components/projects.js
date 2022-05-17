@@ -52,6 +52,7 @@ const StyledProjectsSection = styled.section`
 const Projects = () => {
     useEffect(() => {
         Aos.init({
+            offset: 100,
             duration: 1500,
         });
     }, []);
