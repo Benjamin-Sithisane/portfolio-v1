@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import styled from 'styled-components';
 const profilepic = require('../img/benprofilepic.jpg');
 
@@ -7,6 +9,7 @@ const StyledAboutSection = styled.section`
     padding: 100px 0px;
 
     h1 {
+        font-size: 2rem;
         margin: 0 0 15px 10px;
     }
 
@@ -59,8 +62,15 @@ const StyledAboutSection = styled.section`
 `;
 
 const About = () => {
+    useEffect(() => {
+        Aos.init({
+            offset: 100,
+            duration: 1500,
+        });
+    }, []);
+
     return (
-        <StyledAboutSection id='about'>            
+        <StyledAboutSection id='about'  data-aos='fade-up'>            
             <h1>About Me</h1>
 
             <div className='container'>

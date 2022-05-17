@@ -21,7 +21,7 @@ const StyledMobileMenu = styled.nav`
 
     @media screen and (max-width: 768px) {
         position: fixed;
-        z-index: 1;
+        z-index: 999;
         width: ${({ isOpen }) => (isOpen ? '100%' : '0')};
         height: ${({ isOpen }) => (isOpen ? '100vh' : '0')};
         display: grid;

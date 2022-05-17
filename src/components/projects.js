@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 import styled from 'styled-components';
 
 const StyledProjectsSection = styled.section`
@@ -48,24 +50,30 @@ const StyledProjectsSection = styled.section`
 `;
 
 const Projects = () => {
+    useEffect(() => {
+        Aos.init({
+            duration: 1500,
+        });
+    }, []);
+
     return (
         <StyledProjectsSection id='projects'>
             <h1>Some Projects I worked on.</h1>
 
             <div className='grid'>
-                <div className="project-card">
+                <div className="project-card" id='one' data-aos='fade-up'>
                     <div className='picture-placeholder'></div>
                     <div className='info-container'>
                         <h2>1</h2>
                     </div>
                 </div>
-                <div className="project-card">
+                <div className="project-card" id='two' data-aos='fade-up' data-aos-placement='#one'>
                     <div className='picture-placeholder'></div>
                     <div className='info-container'>
                         <h2>1</h2>
                     </div>
                 </div>
-                <div className="project-card">
+                <div className="project-card" id='three' data-aos='fade-up' data-aos-placement='#two'>
                     <div className='picture-placeholder'></div>
                     <div className='info-container'>
                         <h2>1</h2>

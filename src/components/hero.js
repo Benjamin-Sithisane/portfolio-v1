@@ -11,6 +11,11 @@ const StyledHeroSection = styled.section`
     min-height: 100vh;
     margin: 0 200px;
     font-size: 25px;
+    z-index: -1;
+
+    h1 {
+        font-size: 3rem;
+    }
     
     p {
         color: var(--accent-color);

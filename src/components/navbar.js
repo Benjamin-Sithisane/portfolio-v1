@@ -10,7 +10,8 @@ const StyledNavBar = styled.nav`
     top: 0;
     left: 0;
     right: 0;
-    backdrop-filter: blur(10px);
+    background-color: var(--main-color);
+    z-index: 99;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
 
     .nav-container {
