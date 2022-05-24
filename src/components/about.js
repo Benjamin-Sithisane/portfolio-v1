@@ -75,7 +75,9 @@ const About = () => {
 
             <div className='container'>
                 <div>
-                    <p>I am very passionate about software from the day I first used a computer.</p>
+                    <p>I am very passionate about software from the day I first used a computer. I've learned software 
+                        development and many areas of computer science. 
+                    </p>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
