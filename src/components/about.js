@@ -41,6 +41,11 @@ const StyledAboutSection = styled.section`
         font-size: 25px;
     }
 
+    u {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+
     @media (max-width: 1300px) {
         padding: 0;
         margin: 0 0 75px 0;
@@ -75,14 +80,11 @@ const About = () => {
 
             <div className='container'>
                 <div>
-                    <p>I am very passionate about software from the day I first used a computer. I've learned software 
-                        development and many areas of computer science. 
+                    <p>I became passionate about software from the day I first used a computer. I've learned a 
+                        variety of technical skill sets through self-learning. I've learned programming languages like
+                        <u> JavaScript</u>, <u>HTML</u>, <u>CSS</u>. Now, I am a hobbyist trying to break-in a career into
+                        Software Developement!
                     </p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
                 </div>
 
                 <img src={profilepic} alt='Ben'/>
