@@ -47,7 +47,7 @@ const Contact = () => {
     return (
         <StyledContactSection id='contact'>
             <p>
-                I'm currently looking for opportunities! Feel free to drop a question or conversation
+               Feel free to drop a question or conversation
                 I'll do my best to get back to you!
             </p>
 
